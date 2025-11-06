@@ -3,75 +3,93 @@ import footerVideo from '../img/footer.mp4';
 
 const Footer = () => {
   return (
-    <footer className="relative py-12">
+    <footer className="relative py-16 overflow-hidden">
       {/* Background video with dark green overlay */}
       <div className="absolute inset-0 overflow-hidden">
-        <video 
+        <video
           src={footerVideo}
-          autoPlay 
-          loop 
-          muted 
+          autoPlay
+          loop
+          muted
           playsInline
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-green-900/90"></div>
       </div>
-      
+
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center pr-10">
-          <div className="mb-8 md:mb-0 text-center md:text-left">
-            <h2 
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start">
+          {/* Logo / Name */}
+          <div className="mb-12 md:mb-0 text-center md:text-left">
+            <h2
               className="font-bold text-white"
-              style={{ fontSize: '200px', lineHeight: '1' }}
+              style={{ fontSize: '160px', lineHeight: '1' }}
             >
               Qordex
             </h2>
             <p className="text-gray-300 mt-4 text-lg font-medium italic">
-             {/* Connecting you to what matters */}
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+          {/* Navigation / Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 text-center sm:text-left">
             <div>
-              <h3 className="text-white font-semibold mb-4 text-lg">Navigation</h3>
+              <h3 className="text-white font-semibold mb-4 text-lg">
+                Navigation
+              </h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">News</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Project</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Promos</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                {['Home', 'News', 'Blog', 'Projects', 'Promos', 'About', 'Contact Us'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            
+
             <div>
               <h3 className="text-white font-semibold mb-4 text-lg">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Cookie Policy</a></li>
+                {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            
-            <div className="md:col-span-1">
+
+            <div>
               <h3 className="text-white font-semibold mb-4 text-lg">Connect</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Facebook</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">TikTok</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">YouTube</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Instagram</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">GitHub</a></li>
+                {['Facebook', 'TikTok', 'YouTube', 'LinkedIn', 'Instagram', 'GitHub'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-        
+
+        {/* Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-white text-sm">
-            &copy; {new Date().getFullYear()} Qordex. All rights reserved.
+            &copy; {new Date().getFullYear()} <strong>Qordex</strong>. All rights reserved.
           </p>
         </div>
       </div>

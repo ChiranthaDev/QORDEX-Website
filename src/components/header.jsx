@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search, User } from 'lucide-react'
+import { Search, User, Play } from 'lucide-react'
 import logo from '../img/logoo.png'
 import { Link } from 'react-router-dom'
 
@@ -17,19 +17,33 @@ export default function Header() {
                     WebkitTextStroke: '0.5px white'
                   }}
                 >
-                  QORDEX
         </h2>
       </div>
 
-      <div className="flex items-center gap-12 text-white font-medium">
-        <a href="#" className="text-lg hover:text-teal-200 transition">Home</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">News</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">Blog</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">Project</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">Promos</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">About</a>
-        <a href="#" className="text-lg hover:text-teal-200 transition">Contact Us</a>
-      </div>
+      {/* Navigation */}
+        <div className="hidden lg:flex items-center gap-6 text-white font-medium">
+          <Link to="/" className="text-lg hover:text-teal-200 transition">
+            Home
+          </Link>
+          <Link to="/news" className="text-lg hover:text-teal-200 transition">
+            News
+          </Link>
+          <Link to="/blog" className="text-lg hover:text-teal-200 transition">
+            Blog
+          </Link>
+          <Link to="/reflections" className="text-lg hover:text-teal-200 transition flex items-center gap-2">
+            Watch
+          </Link>
+          <Link to="#" className="text-lg hover:text-teal-200 transition">
+            Project
+          </Link>
+          <Link to="#" className="text-lg hover:text-teal-200 transition">
+            About
+          </Link>
+          <Link to="#" className="text-lg hover:text-teal-200 transition">
+            Contact Us
+          </Link>
+        </div>
 
       <div className="flex items-center gap-4">
         <div className="relative">

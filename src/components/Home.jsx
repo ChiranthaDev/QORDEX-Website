@@ -38,7 +38,7 @@ export default function Home() {
       <CursorAnimation />
       <div>
         {/* Main Hero Container */}
-        <div style={{ height: '700px' }}>
+        <div style={{ height: '600px' }}>
           {/* Background Image */}
           <div 
             className="absolute inset-0"

@@ -9,13 +9,13 @@ import otherVideo from '../img/other.webm';
 import projectsVideo from '../img/projects.webm';
 
 // Import section components
-import HeroPost from './home/HeroPost';
-import BrowseCategories from './home/BrowseCategories';
-import Qordexchannel from './home/qordexchannel';
-import Hotnews from './home/Hotnews';
-import Blospost from './home/blospost';
-import AdsChannel from './home/AdsChannel';
-import GamingSection from './home/GamingSection';
+import HeroPost from '../home/HeroPost';
+import BrowseCategories from '../home/BrowseCategories';
+import Qordexchannel from '../home/qordexchannel';
+import Hotnews from '../home/Hotnews';
+import Blospost from '../home/blospost';
+import AdsChannel from '../home/AdsChannel';
+import GamingSection from '../home/GamingSection';
 
 export default function ZairaGamingBlog() {
   const [email, setEmail] = useState('');
