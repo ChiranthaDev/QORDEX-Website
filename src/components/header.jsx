@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Search, User, Menu, X } from 'lucide-react'
 import logo from '../img/logoo.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <nav className="relative z-20 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 py-4">
@@ -22,12 +23,30 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-6 text-white font-medium">
-        <Link to="/" className="hover:text-teal-200 transition">Home</Link>
-        <Link to="/news" className="hover:text-teal-200 transition">News</Link>
-        <Link to="/blog" className="hover:text-teal-200 transition">Blog</Link>
-        <Link to="/reflections" className="hover:text-teal-200 transition">Watch</Link>
-        <Link to="#" className="hover:text-teal-200 transition">Project</Link>
-        <Link to="/about" className="hover:text-teal-200 transition">About</Link>
+        <div className="relative">
+          <Link to="/" className={`hover:text-teal-200 transition ${location.pathname === '/' ? 'text-white' : ''}`}>Home</Link>
+          {location.pathname === '/' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
+        <div className="relative">
+          <Link to="/news" className={`hover:text-teal-200 transition ${location.pathname === '/news' ? 'text-white font-semibold' : ''}`}>News</Link>
+          {location.pathname === '/news' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
+        <div className="relative">
+          <Link to="/blog" className={`hover:text-teal-200 transition ${location.pathname === '/blog' ? 'text-white font-semibold' : ''}`}>Blog</Link>
+          {location.pathname === '/blog' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
+        <div className="relative">
+          <Link to="/reflections" className={`hover:text-teal-200 transition ${location.pathname === '/reflections' ? 'text-white font-semibold' : ''}`}>Watch</Link>
+          {location.pathname === '/reflections' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
+        <div className="relative">
+          <Link to="#" className={`hover:text-teal-200 transition ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
+          {location.pathname === '/project' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
+        <div className="relative">
+          <Link to="/about" className={`hover:text-teal-200 transition ${location.pathname === '/about' ? 'text-white font-semibold' : ''}`}>About</Link>
+          {location.pathname === '/about' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+        </div>
       </div>
 
       {/* Right Side Controls */}
@@ -75,12 +94,30 @@ export default function Header() {
             <Search className="absolute right-4 top-2.5 w-4 h-4 text-gray-500" />
           </div>
 
-          <Link onClick={() => setIsOpen(false)} to="/">Home</Link>
-          <Link onClick={() => setIsOpen(false)} to="/news">News</Link>
-          <Link onClick={() => setIsOpen(false)} to="/blog">Blog</Link>
-          <Link onClick={() => setIsOpen(false)} to="/reflections">Watch</Link>
-          <Link onClick={() => setIsOpen(false)} to="#">Project</Link>
-          <Link onClick={() => setIsOpen(false)} to="/about">About</Link>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="/" className={`block ${location.pathname === '/' ? 'text-white font-semibold' : ''}`}>Home</Link>
+            {location.pathname === '/' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="/news" className={`block ${location.pathname === '/news' ? 'text-white font-semibold' : ''}`}>News</Link>
+            {location.pathname === '/news' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="/blog" className={`block ${location.pathname === '/blog' ? 'text-white font-semibold' : ''}`}>Blog</Link>
+            {location.pathname === '/blog' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="/reflections" className={`block ${location.pathname === '/reflections' ? 'text-white font-semibold' : ''}`}>Watch</Link>
+            {location.pathname === '/reflections' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="#" className={`block ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
+            {location.pathname === '/project' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
+          <div className="relative w-full text-center py-1">
+            <Link onClick={() => setIsOpen(false)} to="/about" className={`block ${location.pathname === '/about' ? 'text-white font-semibold' : ''}`}>About</Link>
+            {location.pathname === '/about' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+          </div>
           
           <Link 
             to="/Login" 
