@@ -4,22 +4,18 @@ import { motion } from 'framer-motion'
 import accWEBM from '../img/acc.webm'
 
 export default function HeroSection() {
-  // Animation variants for the cards
+
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
   };
 
-  // Stagger effect for cards
   const containerVariants = {
     visible: {
-      transition: {
-        staggerChildren: 0.2
-      }
+      transition: { staggerChildren: 0.2 }
     }
   };
 
-  // Walking animation variants
   const walkingVariants = {
     walk: {
       x: [-100, 1400],
@@ -32,7 +28,6 @@ export default function HeroSection() {
     }
   };
 
-  // Typing animation for INNOVATE text
   const typingVariants = {
     hidden: { width: 0 },
     visible: {
@@ -46,119 +41,58 @@ export default function HeroSection() {
     }
   };
 
-  // Pop animation for Explore button
-  const buttonVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 15
-      }
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-        yoyo: Infinity
-      }
-    },
-    pulse: {
-      scale: [1, 1.05, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity
-      }
-    }
-  };
-
-  // Pulsing animation for decorative dots
-  const dotVariants = {
-    pulse: {
-      opacity: [0.3, 1, 0.3],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  // Staggered animation for navigation arrows
-  const arrowVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.3
-      }
-    }
-  };
-
-  // Container variants for staggered arrow animation
-  const arrowContainerVariants = {
-    visible: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
   return (
-    <div className="relative z-10 flex items-start px-8 pt-8 h-full">
-      {/* Left Side - Social Icons */}
-      <div className="flex flex-col gap-4 pt-2">
-        <a href="#" className="w-12 h-12 bg-teal-700/80 hover:bg-teal-600 rounded-lg flex items-center justify-center text-white transition">
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+    <div className="relative z-10 flex flex-col md:flex-row items-start px-4 sm:px-6 md:px-8 pt-6 md:pt-10 h-full gap-6">
+
+      {/* Left Social Icons */}
+      <div className="flex flex-row md:flex-col gap-4 pt-2 order-2 md:order-1">
+        {/* Simple valid SVG icons to avoid parsing errors */}
+        <a href="#" className="w-10 h-10 md:w-12 md:h-12 bg-teal-700/80 hover:bg-teal-600 rounded-lg flex items-center justify-center text-white transition" aria-label="social-1">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </a>
-        <a href="#" className="w-9 h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-2">
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M7 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </a>
-        <a href="#" className="w-9 h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-3">
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="2.5" y="2.5" width="19" height="19" rx="4.5" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="12" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M16 7.5h.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </a>
-        <a href="#" className="w-9 h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78.36 78.36 0 0012 4.27a78.45 78.45 0 00-8.34.3 2.87 2.87 0 00-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 000 6.48 9.55 9.55 0 00.3 2 3.14 3.14 0 00.71 1.36 2.86 2.86 0 001.49.78 45.18 45.18 0 006.5.33c3.5.05 6.57 0 10.2-.28a2.88 2.88 0 001.53-.78 2.49 2.49 0 00.61-1 10.58 10.58 0 00.52-3.4c.04-.56.04-3.94.04-4.54zM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08z"/>
+
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-4">
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 7.5v9A2 2 0 0 0 5 19.5h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke="currentColor" strokeWidth="1.5" />
+            <path d="M8 10.5l4 3 4-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </a>
       </div>
 
-      {/* Center - Main Content */}
-      <div className="flex-1 px-12">
-        <div className="border-l-4 border-white pl-8">
-          {/* Decorative dots - new design without animation */}
-          <div className="flex gap-2 mb-6">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-3 h-3 bg-teal-500 rounded-full"></div>
-            ))}
-            <div className="w-8 h-3 bg-teal-700 rounded-full"></div>
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="w-3 h-3 bg-teal-500 rounded-full"></div>
-            ))}
+      {/* Center Text Section */}
+      <div className="flex-1 px-2 sm:px-6 md:px-10 order-1 md:order-2">
+        <div className="border-l-4 border-white pl-4 sm:pl-6 md:pl-8">
+
+          <div className="flex gap-2 mb-4 sm:mb-6">
+            {[...Array(3)].map((_, i) => <div key={i} className="w-2 h-2 sm:w-3 sm:h-3 bg-teal-500 rounded-full" />)}
+            <div className="w-6 h-2 sm:w-8 sm:h-3 bg-teal-700 rounded-full" />
+            {[...Array(2)].map((_, i) => <div key={i} className="w-2 h-2 sm:w-3 sm:h-3 bg-teal-500 rounded-full" />)}
           </div>
 
-          <h2 className="text-7xl font-bold text-white leading-tight mb-0">THINK.</h2>
-          <h2 className="text-7xl font-bold text-white leading-tight mb-0">CREATE.</h2>
-          
-          {/* INNOVATE with typing animation */}
-          <h2 
-            className="text-7xl font-bold leading-tight mb-12"
-            style={{
-              color: 'transparent',
-              WebkitTextStroke: '2.5px white'
-            }}
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-0">THINK.</h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-0">CREATE.</h2>
+
+          <h2
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-10 sm:mb-12"
+            style={{ color: 'transparent', WebkitTextStroke: '2.5px white' }}
           >
             <motion.span
               initial="hidden"
@@ -170,57 +104,41 @@ export default function HeroSection() {
             </motion.span>
           </h2>
 
-          <p className="text-white text-lg leading-relaxed max-w-xl mb-12 opacity-90">
-          </p>
-
-          {/* EXPLORE */}
-          <button className="text-white px-10 py-4 rounded-lg font-semibold text-base flex items-center gap-3 transition shadow-lg bg-[var(--light-green)] hover:bg-[var(--bright-green)]">
+          <button className="text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base flex items-center gap-3 mt-2 sm:mt-4 transition shadow-lg bg-[var(--light-green)] hover:bg-[var(--bright-green)]">
             EXPLORE
-            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-              <ChevronRight className="w-4 h-4 text-teal-600" />
+            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center">
+              <ChevronRight className="w-3 sm:w-4 h-3 sm:h-4 text-teal-600" />
             </div>
           </button>
         </div>
 
-        {/* Bottom decorative elements */}
-        <div className="flex gap-3 mt-8 ml-8">
-          <div className="w-10 h-1 bg-teal-500 rounded"></div>
-          <div className="w-6 h-1 bg-teal-700 rounded"></div>
-          <div className="w-4 h-1 bg-teal-500 rounded"></div>
+        <div className="flex gap-3 mt-5 sm:mt-8 ml-4 sm:ml-8">
+          <div className="w-6 sm:w-10 h-1 bg-teal-500 rounded" />
+          <div className="w-4 sm:w-6 h-1 bg-teal-700 rounded" />
+          <div className="w-3 sm:w-4 h-1 bg-teal-500 rounded" />
         </div>
       </div>
 
-      {/* Right Side - Cards and Navigation Arrows */}
-      <div className="flex flex-col">
-        {/* Navigation Arrows - new design without animation */}
-        <div className="flex gap-2 mb-6">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="w-3 h-3 border-t-2 border-r-2 border-white rotate-45"></div>
-          ))}
-        </div>
-
-        {/* Cards - Horizontal Layout with Animation */}
-        <motion.div 
-          className="flex gap-6 mt-8"
+      {/* Right Cards */}
+      <div className="flex justify-center md:justify-start order-3">
+        <motion.div
+          className="flex gap-4 sm:gap-6 mt-4 sm:mt-8 overflow-x-auto pb-2"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {[1, 2, 3].map((num) => (
-            <motion.div 
-              key={num} 
-              className="bg-white rounded-lg shadow-xl w-56 overflow-hidden transform hover:scale-102 transition-transform duration-300"
+            <motion.div
+              key={num}
+              className="bg-white rounded-lg shadow-xl min-w-[180px] sm:min-w-[200px] md:min-w-[220px] lg:min-w-[240px] overflow-hidden hover:scale-105 transition-transform duration-300"
               variants={cardVariants}
-              whileHover={{ 
-                scale: 1.05, 
-                transition: { duration: 0.2 } 
-              }}
             >
-              <div className="bg-gradient-to-br from-gray-200 to-gray-300 h-32" />
-              <div className="p-5">
-                <h3 className="font-semibold text-teal-900 text-base mb-2">New AI Agent Released.</h3>
-                <p className="text-gray-500 text-sm mb-5">Chirantha J Ellepola</p>
-                <button className="text-white w-full py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 transition bg-[var(--light-green)] hover:bg-[var(--dark-forest-green)]">
+              <div className="bg-gradient-to-br from-gray-200 to-gray-300 h-24 sm:h-28 md:h-32" />
+              <div className="p-4 sm:p-5">
+                <h3 className="font-semibold text-teal-900 text-sm sm:text-base mb-1 sm:mb-2">New AI Agent Released.</h3>
+                <p className="text-gray-500 text-xs sm:text-sm mb-4">Chirantha J Ellepola</p>
+
+                <button className="text-white w-full py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition bg-[var(--light-green)] hover:bg-[var(--dark-forest-green)]">
                   READ MORE
                   <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
                     <ChevronRight className="w-2.5 h-2.5 text-teal-700" />
@@ -231,19 +149,18 @@ export default function HeroSection() {
           ))}
         </motion.div>
       </div>
-      
-      {/* Walking Animation at Bottom - Extended path to reach right edge */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-visible">
-        <motion.video 
-          src={accWEBM}
-          className="h-32 w-auto"
-          animate="walk"
-          variants={walkingVariants}
-          loop
-          autoPlay
-          muted
-        />
-      </div>
+
+      {/* Walking Animation Lower */}
+      <motion.video 
+  src={accWEBM}
+  className="absolute -bottom-34 sm:-bottom-36 md:-bottom-40 h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain pointer-events-none left-0 right-0"
+  animate="walk"
+  variants={walkingVariants}
+  loop
+  autoPlay
+  muted
+/>
+
     </div>
   );
 }

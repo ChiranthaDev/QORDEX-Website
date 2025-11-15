@@ -42,7 +42,7 @@ const Footer = () => {
                 {['Home', 'News', 'Blog', 'Projects', 'Promos', 'About', 'Contact Us'].map((item) => (
                   <li key={item}>
                     <a
-                      href="#"
+                      href={item === 'About' ? '/about' : '#'}
                       className="text-gray-300 hover:text-white transition-colors"
                     >
                       {item}
