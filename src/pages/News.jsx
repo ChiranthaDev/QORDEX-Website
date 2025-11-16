@@ -15,7 +15,7 @@ const newsData = [
     likes: 24,
     comments: 8,
     shares: 12,
-    image: "../img/1.jpg"
+    image: "../img/172.jpg"
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const newsData = [
     likes: 42,
     comments: 15,
     shares: 7,
-    image: "../img/3.jpg"
+    image: "../img/gaming.webm"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const newsData = [
     likes: 31,
     comments: 12,
     shares: 9,
-    image: "../img/4.jpg"
+    image: "../img/joystick.webm"
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const newsData = [
     likes: 38,
     comments: 17,
     shares: 14,
-    image: "../img/5.jpg"
+    image: "../img/chatbot.webm"
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const newsData = [
     likes: 56,
     comments: 22,
     shares: 18,
-    image: "../img/6.jpg"
+    image: "../img/projects.webm"
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const newsData = [
     likes: 29,
     comments: 9,
     shares: 6,
-    image: "../img/7.jpg"
+    image: "../img/news.webm"
   },
   {
     id: 7,
@@ -87,7 +87,7 @@ const newsData = [
     likes: 47,
     comments: 14,
     shares: 11,
-    image: "../img/8.jpg"
+    image: "../img/other.webm"
   },
   {
     id: 8,
@@ -99,7 +99,7 @@ const newsData = [
     likes: 33,
     comments: 11,
     shares: 8,
-    image: "../img/9.jpg"
+    image: "../img/172.jpg"
   }
 ];
 
@@ -149,7 +149,7 @@ export default function News() {
           <Link to="/news/1" className="lg:col-span-2 overflow-hidden rounded-2xl shadow-2xl transform transition-all hover:scale-[1.02] duration-300 relative block">
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/80 z-10"></div>
             <img 
-              src="../img/1.jpg" 
+              src="../img/172.jpg" 
               alt="Today's Hot News" 
               className="w-full h-80 object-cover rounded-2xl"
               onError={(e) => {
@@ -188,7 +188,14 @@ export default function News() {
             <Link to="/news/2" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 block">
               <div className="flex gap-3 p-3">
                 <div className="flex-shrink-0">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-lg w-12 h-12" />
+                  <img 
+                    src="../img/172.jpg" 
+                    alt="Quantum Computing" 
+                    className="rounded-lg w-12 h-12 object-cover"
+                    onError={(e) => {
+                      e.target.src = 'https://placehold.co/200x200/3DBE62/FFFFFF?text=Tech';
+                    }}
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5 mb-1">
@@ -206,7 +213,14 @@ export default function News() {
             <Link to="/news/3" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 block">
               <div className="flex gap-3 p-3">
                 <div className="flex-shrink-0">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-lg w-12 h-12" />
+                  <img 
+                    src="../img/gaming.webm" 
+                    alt="Gaming Console" 
+                    className="rounded-lg w-12 h-12 object-cover"
+                    onError={(e) => {
+                      e.target.src = 'https://placehold.co/200x200/3DBE62/FFFFFF?text=Gaming';
+                    }}
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5 mb-1">
@@ -224,7 +238,14 @@ export default function News() {
             <Link to="/news/4" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 block">
               <div className="flex gap-3 p-3">
                 <div className="flex-shrink-0">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-lg w-12 h-12" />
+                  <img 
+                    src="../img/joystick.webm" 
+                    alt="Cryptocurrency" 
+                    className="rounded-lg w-12 h-12 object-cover"
+                    onError={(e) => {
+                      e.target.src = 'https://placehold.co/200x200/3DBE62/FFFFFF?text=Finance';
+                    }}
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5 mb-1">
@@ -242,7 +263,14 @@ export default function News() {
             <Link to="/news/5" className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300 block">
               <div className="flex gap-3 p-3">
                 <div className="flex-shrink-0">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-lg w-12 h-12" />
+                  <img 
+                    src="../img/chatbot.webm" 
+                    alt="Gene Therapy" 
+                    className="rounded-lg w-12 h-12 object-cover"
+                    onError={(e) => {
+                      e.target.src = 'https://placehold.co/200x200/3DBE62/FFFFFF?text=Health';
+                    }}
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-1.5 mb-1">

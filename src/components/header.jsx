@@ -31,16 +31,18 @@ export default function Header() {
           <Link to="/news" className={`hover:text-teal-200 transition ${location.pathname === '/news' ? 'text-white font-semibold' : ''}`}>News</Link>
           {location.pathname === '/news' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
         </div>
+        
+        
         <div className="relative">
           <Link to="/blog" className={`hover:text-teal-200 transition ${location.pathname === '/blog' ? 'text-white font-semibold' : ''}`}>Blog</Link>
           {location.pathname === '/blog' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
         </div>
         <div className="relative">
-          <Link to="/reflections" className={`hover:text-teal-200 transition ${location.pathname === '/reflections' ? 'text-white font-semibold' : ''}`}>Watch</Link>
-          {location.pathname === '/reflections' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
+          <Link to="/watch" className={`hover:text-teal-200 transition ${location.pathname === '/watch' ? 'text-white font-semibold' : ''}`}>Watch</Link>
+          {location.pathname === '/watch' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
         </div>
         <div className="relative">
-          <Link to="#" className={`hover:text-teal-200 transition ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
+          <Link to="/project" className={`hover:text-teal-200 transition ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
           {location.pathname === '/project' && <div className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-white rounded-full"></div>}
         </div>
         <div className="relative">
@@ -64,7 +66,7 @@ export default function Header() {
 
         {/* Login Button */}
         <Link 
-          to="/Login" 
+          to="/login" 
           className="hidden sm:flex items-center gap-2 bg-white text-teal-700 px-5 py-2 rounded-full text-sm font-medium hover:bg-teal-50 transition shadow-md"
         >
           <User className="w-4 h-4"/>
@@ -107,11 +109,11 @@ export default function Header() {
             {location.pathname === '/blog' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
           </div>
           <div className="relative w-full text-center py-1">
-            <Link onClick={() => setIsOpen(false)} to="/reflections" className={`block ${location.pathname === '/reflections' ? 'text-white font-semibold' : ''}`}>Watch</Link>
-            {location.pathname === '/reflections' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
+            <Link onClick={() => setIsOpen(false)} to="/watch" className={`block ${location.pathname === '/watch' ? 'text-white font-semibold' : ''}`}>Watch</Link>
+            {location.pathname === '/watch' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
           </div>
           <div className="relative w-full text-center py-1">
-            <Link onClick={() => setIsOpen(false)} to="#" className={`block ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
+            <Link onClick={() => setIsOpen(false)} to="/project" className={`block ${location.pathname === '/project' ? 'text-white font-semibold' : ''}`}>Project</Link>
             {location.pathname === '/project' && <div className="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-white rounded-full"></div>}
           </div>
           <div className="relative w-full text-center py-1">
@@ -120,7 +122,7 @@ export default function Header() {
           </div>
           
           <Link 
-            to="/Login" 
+            to="/login" 
             onClick={() => setIsOpen(false)}
             className="bg-white text-teal-700 px-7 py-2 rounded-full"
           >

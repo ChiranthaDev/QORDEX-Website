@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Facebook, Twitter, Youtube, Instagram, ShoppingCart, User, Music, Linkedin, Github } from 'lucide-react';
-import { LayoutGridDemo } from './ui/layout';
+// import { LayoutGridDemo } from './ui/layout';
 import joystickVideo from '../img/joystick.webm';
 import gamingVideo from '../img/gaming.webm';
 import chatbotVideo from '../img/chatbot.webm';
@@ -149,7 +149,7 @@ export default function ZairaGamingBlog() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <HeroPost heroArticles={heroArticles} />
       <BrowseCategories categoryItems={categoryItems} />
       <Qordexchannel />

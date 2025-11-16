@@ -47,21 +47,21 @@ export default function HeroSection() {
       {/* Left Social Icons */}
       <div className="flex flex-row md:flex-col gap-4 pt-2 order-2 md:order-1">
         {/* Simple valid SVG icons to avoid parsing errors */}
-        <a href="#" className="w-10 h-10 md:w-12 md:h-12 bg-teal-700/80 hover:bg-teal-600 rounded-lg flex items-center justify-center text-white transition" aria-label="social-1">
+        <a href="#" className="w-10 h-10 md:w-12 md:h-12 bg-teal-700/80 hover:bg-teal-600 rounded-2xl flex items-center justify-center text-white transition" aria-label="social-1">
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
             <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
             <path d="M8 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </a>
 
-        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-2">
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded-2xl flex items-center justify-center text-white transition" aria-label="social-2">
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
             <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5" />
             <path d="M7 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
         </a>
 
-        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-3">
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded-2xl flex items-center justify-center text-white transition" aria-label="social-3">
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
             <rect x="2.5" y="2.5" width="19" height="19" rx="4.5" stroke="currentColor" strokeWidth="1.5" />
             <circle cx="12" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
@@ -69,7 +69,7 @@ export default function HeroSection() {
           </svg>
         </a>
 
-        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded flex items-center justify-center text-white transition" aria-label="social-4">
+        <a href="#" className="w-8 h-8 md:w-9 md:h-9 bg-teal-700/80 hover:bg-teal-600 rounded-2xl flex items-center justify-center text-white transition" aria-label="social-4">
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path d="M3 7.5v9A2 2 0 0 0 5 19.5h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" stroke="currentColor" strokeWidth="1.5" />
             <path d="M8 10.5l4 3 4-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -104,7 +104,7 @@ export default function HeroSection() {
             </motion.span>
           </h2>
 
-          <button className="text-white px-8 sm:px-10 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base flex items-center gap-3 mt-2 sm:mt-4 transition shadow-lg bg-[var(--light-green)] hover:bg-[var(--bright-green)]">
+          <button className="text-white px-8 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base flex items-center gap-3 mt-2 sm:mt-4 transition shadow-lg bg-[var(--light-green)] hover:bg-[var(--bright-green)]">
             EXPLORE
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full flex items-center justify-center">
               <ChevronRight className="w-3 sm:w-4 h-3 sm:h-4 text-teal-600" />
@@ -130,7 +130,7 @@ export default function HeroSection() {
           {[1, 2, 3].map((num) => (
             <motion.div
               key={num}
-              className="bg-white rounded-lg shadow-xl min-w-[180px] sm:min-w-[200px] md:min-w-[220px] lg:min-w-[240px] overflow-hidden hover:scale-105 transition-transform duration-300"
+              className="bg-white  rounded-xl shadow-xl min-w-[180px] sm:min-w-[200px] md:min-w-[220px] lg:min-w-[240px] overflow-hidden hover:scale-105 transition-transform duration-300"
               variants={cardVariants}
             >
               <div className="bg-gradient-to-br from-gray-200 to-gray-300 h-24 sm:h-28 md:h-32" />
@@ -138,7 +138,7 @@ export default function HeroSection() {
                 <h3 className="font-semibold text-teal-900 text-sm sm:text-base mb-1 sm:mb-2">New AI Agent Released.</h3>
                 <p className="text-gray-500 text-xs sm:text-sm mb-4">Chirantha J Ellepola</p>
 
-                <button className="text-white w-full py-2 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition bg-[var(--light-green)] hover:bg-[var(--dark-forest-green)]">
+                <button className="text-white w-full py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition bg-[var(--light-green)] hover:bg-[var(--dark-forest-green)]">
                   READ MORE
                   <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
                     <ChevronRight className="w-2.5 h-2.5 text-teal-700" />

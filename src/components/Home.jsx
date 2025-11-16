@@ -7,7 +7,7 @@ import CategoryHero from './CategoryHero';
 import Blogscard from './Blogscard';
 import Footer from './footer';
 import backgroundImage from '../img/2.jpg';
-import { BentoGridDemo } from './ui/bento';
+// import { BentoGridDemo } from './ui/bento';
 import { ArrowUp } from 'lucide-react';
 
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* BLOG & CONTENT SECTIONS */}
-      <div className="relative bg-white w-full overflow-hidden">
+      <div className="relative bg-gray-900 w-full overflow-hidden">
         <Blog />
         <Blogscard />
       </div>

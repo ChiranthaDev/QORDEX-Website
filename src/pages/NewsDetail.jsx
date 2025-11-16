@@ -16,7 +16,7 @@ const newsData = [
     likes: 24,
     comments: 8,
     shares: 12,
-    image: "../img/1.jpg"
+    image: "../img/172.jpg"
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const newsData = [
     likes: 42,
     comments: 15,
     shares: 7,
-    image: "../img/3.jpg"
+    image: "../img/gaming.webm"
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const newsData = [
     likes: 31,
     comments: 12,
     shares: 9,
-    image: "../img/4.jpg"
+    image: "../img/joystick.webm"
   }
 ];
 

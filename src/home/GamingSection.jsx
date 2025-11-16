@@ -7,7 +7,7 @@ const GamingSection = ({ hotTrends }) => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8">
           <div>
-            <h1 className="text-6xl font-bold tracking-tight text-WHITE mb-8">
+            <h1 className="text-6xl font-bold tracking-tight text-white mb-8">
               GAMING
               <div className="flex gap-4 mt-2 mb-4">
                 <div className="w-10 h-1 bg-teal-500 rounded"></div>

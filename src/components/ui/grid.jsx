@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
   IconBoxAlignRightFilled,
   IconClipboardCopy,
@@ -9,7 +9,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 
 export function BentoGridThirdDemo() {
