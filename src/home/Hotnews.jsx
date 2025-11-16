@@ -18,7 +18,7 @@ const Hotnews = ({ todaysPicks }) => {
 
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:w-1/2 cursor-pointer group">
-                <div className="relative h-[600px] rounded-lg overflow-hidden mb-4 shadow-xl">
+                <div className="relative h-[600px] rounded-xl overflow-hidden mb-4 shadow-xl">
                   <img
                     src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=500&fit=crop"
                     alt="Featured"
@@ -43,7 +43,7 @@ const Hotnews = ({ todaysPicks }) => {
               <div className="md:w-1/2 flex flex-col gap-6">
                 {todaysPicks.map((post, index) => (
                   <div key={index} className="cursor-pointer group flex-1">
-                    <div className="h-[180px] flex gap-4 bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div className="h-[180px] flex gap-4 bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
                       <div className="flex-1">
                         <h3 className="text-1x1 font-medium text-black mb-2 group-hover:text-green-600">
                           {post.title}
@@ -54,7 +54,7 @@ const Hotnews = ({ todaysPicks }) => {
                           <span>{post.date}</span>
                         </div>
                       </div>
-                      <div className="relative w-44 h-34 rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="relative w-44 h-34 rounded-xl overflow-hidden flex-shrink-0">
                         <img
                           src={post.image}
                           alt={post.title}
@@ -69,7 +69,7 @@ const Hotnews = ({ todaysPicks }) => {
           </div>
 
           <div>
-            <div className="bg-white border border-gray-100 rounded-lg p-6 mb-6">
+            <div className="bg-white border border-gray-100 rounded-xl p-6 mb-6">
               <h3 className="text-2xl font-bold tracking-tight text-black mb-4">
                 FOLLOW
                 <div className="flex gap-2 mt-2 mb-4">
@@ -100,7 +100,7 @@ const Hotnews = ({ todaysPicks }) => {
               </div>
             </div>
 
-            <div className="bg-slate-900 text-white rounded-lg p-8 mb-6">
+            <div className="bg-slate-900 text-white rounded-xl p-8 mb-6">
               <h3 className="text-xl font-bold mb-4">Daily Newsletter</h3>
               <p className="text-gray-400 text-sm mb-6">
                 Discover trending tech stories and gaming highlights. Subscribe to stay updated!

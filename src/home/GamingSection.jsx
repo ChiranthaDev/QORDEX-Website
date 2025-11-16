@@ -21,7 +21,7 @@ const GamingSection = ({ hotTrends }) => {
                   <img
                     src={trend.image}
                     alt={trend.title}
-                    className="w-48 h-32 rounded-lg object-cover group-hover:scale-105 transition-transform"
+                    className="w-48 h-32 rounded-xl object-cover group-hover:scale-105 transition-transform"
                   />
                   <div className="flex-1">
                     <span className="inline-block bg-green-500 text-xs px-2 py-1 rounded mb-2">

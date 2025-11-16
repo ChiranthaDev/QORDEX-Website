@@ -18,7 +18,7 @@ const RecentPosts = ({ newBlogPosts, trendingBlogPosts }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First two posts - one per row, slightly decreased size */}
               {newBlogPosts.slice(0, 2).map((post, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer group">
+                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer group">
                   <div className="relative h-58">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -33,7 +33,7 @@ const RecentPosts = ({ newBlogPosts, trendingBlogPosts }) => {
               {/* Other 3 posts - horizontal line, increased to more square size */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:col-span-2">
                 {newBlogPosts.slice(2).map((post, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer group">
+                  <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer group">
                     <div className="relative h-64">
                       <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -49,7 +49,7 @@ const RecentPosts = ({ newBlogPosts, trendingBlogPosts }) => {
           </div>
 
           <div>
-            <div className="bg-white border border-white rounded-lg p-7">
+            <div className="bg-white border border-white rounded-xl p-7">
               <h3 className="text-2xl font-bold tracking-tight text-black">
                 TRENDING BLOGS
                 {/* Bottom decorative elements */}
@@ -62,7 +62,7 @@ const RecentPosts = ({ newBlogPosts, trendingBlogPosts }) => {
               <div className="space-y-4">
                 {trendingBlogPosts.map((news, index) => (
                   <div key={index} className="flex gap-3 cursor-pointer group">
-                    <img src={news.image} alt={news.title} className="w-31 h-31 rounded object-cover" />
+                    <img src={news.image} alt={news.title} className="w-31 h-31 rounded-xl object-cover" />
                     <div className="flex-1">
                       <h4 className="text-black text-sm font-semibold mb-1 group-hover:text-green-500 line-clamp-2">{news.title}</h4>
                       <p className="text-xs text-gray-500">{news.author} • {news.date}</p>

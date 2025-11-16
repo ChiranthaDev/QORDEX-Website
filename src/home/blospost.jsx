@@ -21,7 +21,7 @@ const Blospost = ({ newBlogPosts, trendingBlogPosts }) => {
               {newBlogPosts.slice(0, 2).map((post, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer group"
+                  className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer group"
                 >
                   <div className="relative h-58">
                     <img
@@ -47,7 +47,7 @@ const Blospost = ({ newBlogPosts, trendingBlogPosts }) => {
                 {newBlogPosts.slice(2).map((post, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-lg overflow-hidden shadow-sm cursor-pointer group"
+                    className="bg-white rounded-xl overflow-hidden shadow-sm cursor-pointer group"
                   >
                     <div className="relative h-64">
                       <img
@@ -73,7 +73,7 @@ const Blospost = ({ newBlogPosts, trendingBlogPosts }) => {
 
           {/* Right: Trending Blogs */}
           <div>
-            <div className="bg-white border border-gray-100 rounded-lg p-7 shadow-sm">
+            <div className="bg-white border border-gray-100 rounded-xl p-7 shadow-sm">
               <h3 className="text-2xl font-bold tracking-tight text-black mb-4">
                 TRENDING BLOGS
                 <div className="flex gap-3 mt-2 mb-4">
@@ -89,7 +89,7 @@ const Blospost = ({ newBlogPosts, trendingBlogPosts }) => {
                     <img
                       src={news.image}
                       alt={news.title}
-                      className="w-36 h-22 rounded object-cover"
+                      className="w-36 h-22 rounded-xl object-cover"
                     />
                     <div className="flex-1">
                       <h4 className="text-black text-sm font-semibold mb-1 group-hover:text-green-500 line-clamp-2">
